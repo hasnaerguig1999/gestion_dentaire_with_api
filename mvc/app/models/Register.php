@@ -2,9 +2,9 @@
 
   class Register extends DB {
       public function sign_up($data){
-          $sql="INSERT INTO client(uniqId,nom,prenom,date_naissance,email) VALUES (?,?,?,?,?)";
+          $sql="INSERT INTO client(uniqId,email,nom,prenom,date_naissance,situation_familiale,adress,date_depart,date_darrive,type_pass,num_pass,type_visa,nationalite) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)";
           $sql=$this->connect()->prepare($sql);
-          if($sql->execute([$data['uniqId'],$data['nom'],$data['prenom'],$data['date_naissance'],$data['email']]))
+          if($sql->execute([$data['uniqId'],$data['email'],$data['nom'],$data['prenom'],$data['date_naissance'],$data['situation_familiale'],$data['adress'],$data['date_depart'],$data['date_darrive'],$data['type_pass'],$data['num_pass'],$data['type_visa'],$data['nationalite']]))
                return 1;
           return 0;
       }

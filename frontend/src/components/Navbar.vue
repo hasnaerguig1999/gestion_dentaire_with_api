@@ -4,7 +4,7 @@
         <div>
             <router-link style="text-decoration:none;" :to="{ name: 'HomeV',params:{ title : 'View All creneau available'}}">
                 <a class="nav-link active" aria-current="page">
-                  <img src="../assets/images/cabinet1.svg" alt="">
+                  <img src="../assets/images/visa.jpeg" alt="">
                 </a>
             </router-link>
         </div>
